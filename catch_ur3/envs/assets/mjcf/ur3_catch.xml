@@ -1,0 +1,125 @@
+<mujoco model="ur3_catch">
+
+    <include file="ur3_configs.xml"/>
+    <include file="ur3_constraints.xml"/>
+
+    <!-- an UR3 robot, a stand, and a ball -->
+    <worldbody>
+
+        <!-- camera settings -->
+        <camera pos="-2 -3 1.5" name="sideview" xyaxes="0.5 -0.5 0 0.2 0.2 1"/>
+        <camera pos="0 0 5" name="topview" />
+        <camera pos="0 -4 1" name="frontview" xyaxes="1 0 0 0 0.5 1" />
+
+        <!-- attach floor geom to the worldbody -->
+        <geom name="floor" type="plane" pos="0 0 0" size="0 0 1" rgba=".6 .6 .5 1"
+            contype="1" conaffinity="1" friction="2 0.1 0.002" material="grid"/>
+
+        <!-- an UR3 robot attached to a stand -->
+        <body name="stand" pos="0 0 0">
+
+            <inertial pos="0 0 0" quat="1 0 0 0" mass="75" diaginertia="10 10 10" />
+
+            <!--Dual UR3 Stand (visualization)-->
+            <geom name="stand" pos="0 0 0" type="mesh" contype="0" conaffinity="0" group="1" rgba="0.5 0.5 0.5 1" mesh="dual_stand_vis"/>
+            <!--Dual UR3 Stand (collision)-->
+            <geom name="test_convex0.stl" pos="0 0 0" type="mesh" contype="1" conaffinity="0" group="0" rgba="0.2 0.2 0.2 0.2" mesh="test_convex0.stl"/>
+            <geom name="test_convex1.stl" pos="0 0 0" type="mesh" contype="1" conaffinity="0" group="0" rgba="0.2 0.2 0.2 0.2" mesh="test_convex1.stl"/>
+            <geom name="test_convex10.stl" pos="0 0 0" type="mesh" contype="1" conaffinity="0" group="0" rgba="0.2 0.2 0.2 0.2" mesh="test_convex10.stl"/>
+            <geom name="test_convex11.stl" pos="0 0 0" type="mesh" contype="1" conaffinity="0" group="0" rgba="0.2 0.2 0.2 0.2" mesh="test_convex11.stl"/>
+            <geom name="test_convex12.stl" pos="0 0 0" type="mesh" contype="1" conaffinity="0" group="0" rgba="0.2 0.2 0.2 0.2" mesh="test_convex12.stl"/>
+            <geom name="test_convex13.stl" pos="0 0 0" type="mesh" contype="1" conaffinity="0" group="0" rgba="0.2 0.2 0.2 0.2" mesh="test_convex13.stl"/>
+            <geom name="test_convex14.stl" pos="0 0 0" type="mesh" contype="1" conaffinity="0" group="0" rgba="0.2 0.2 0.2 0.2" mesh="test_convex14.stl"/>
+            <geom name="test_convex15.stl" pos="0 0 0" type="mesh" contype="1" conaffinity="0" group="0" rgba="0.2 0.2 0.2 0.2" mesh="test_convex15.stl"/>
+            <geom name="test_convex16.stl" pos="0 0 0" type="mesh" contype="1" conaffinity="0" group="0" rgba="0.2 0.2 0.2 0.2" mesh="test_convex16.stl"/>
+            <geom name="test_convex17.stl" pos="0 0 0" type="mesh" contype="1" conaffinity="0" group="0" rgba="0.2 0.2 0.2 0.2" mesh="test_convex17.stl"/>
+            <geom name="test_convex18.stl" pos="0 0 0" type="mesh" contype="1" conaffinity="0" group="0" rgba="0.2 0.2 0.2 0.2" mesh="test_convex18.stl"/>
+            <geom name="test_convex19.stl" pos="0 0 0" type="mesh" contype="1" conaffinity="0" group="0" rgba="0.2 0.2 0.2 0.2" mesh="test_convex19.stl"/>
+            <geom name="test_convex2.stl" pos="0 0 0" type="mesh" contype="1" conaffinity="0" group="0" rgba="0.2 0.2 0.2 0.2" mesh="test_convex2.stl"/>
+            <geom name="test_convex20.stl" pos="0 0 0" type="mesh" contype="1" conaffinity="0" group="0" rgba="0.2 0.2 0.2 0.2" mesh="test_convex20.stl"/>
+            <geom name="test_convex21.stl" pos="0 0 0" type="mesh" contype="1" conaffinity="0" group="0" rgba="0.2 0.2 0.2 0.2" mesh="test_convex21.stl"/>
+            <geom name="test_convex22.stl" pos="0 0 0" type="mesh" contype="1" conaffinity="0" group="0" rgba="0.2 0.2 0.2 0.2" mesh="test_convex22.stl"/>
+            <geom name="test_convex23.stl" pos="0 0 0" type="mesh" contype="1" conaffinity="0" group="0" rgba="0.2 0.2 0.2 0.2" mesh="test_convex23.stl"/>
+            <geom name="test_convex24.stl" pos="0 0 0" type="mesh" contype="1" conaffinity="0" group="0" rgba="0.2 0.2 0.2 0.2" mesh="test_convex24.stl"/>
+            <geom name="test_convex25.stl" pos="0 0 0" type="mesh" contype="1" conaffinity="0" group="0" rgba="0.2 0.2 0.2 0.2" mesh="test_convex25.stl"/>
+            <geom name="test_convex26.stl" pos="0 0 0" type="mesh" contype="1" conaffinity="0" group="0" rgba="0.2 0.2 0.2 0.2" mesh="test_convex26.stl"/>
+            <geom name="test_convex27.stl" pos="0 0 0" type="mesh" contype="1" conaffinity="0" group="0" rgba="0.2 0.2 0.2 0.2" mesh="test_convex27.stl"/>
+            <geom name="test_convex28.stl" pos="0 0 0" type="mesh" contype="1" conaffinity="0" group="0" rgba="0.2 0.2 0.2 0.2" mesh="test_convex28.stl"/>
+            <geom name="test_convex29.stl" pos="0 0 0" type="mesh" contype="1" conaffinity="0" group="0" rgba="0.2 0.2 0.2 0.2" mesh="test_convex29.stl"/>
+            <geom name="test_convex3.stl" pos="0 0 0" type="mesh" contype="1" conaffinity="0" group="0" rgba="0.2 0.2 0.2 0.2" mesh="test_convex3.stl"/>
+            <geom name="test_convex30.stl" pos="0 0 0" type="mesh" contype="1" conaffinity="0" group="0" rgba="0.2 0.2 0.2 0.2" mesh="test_convex30.stl"/>
+            <geom name="test_convex31.stl" pos="0 0 0" type="mesh" contype="1" conaffinity="0" group="0" rgba="0.2 0.2 0.2 0.2" mesh="test_convex31.stl"/>
+            <geom name="test_convex32.stl" pos="0 0 0" type="mesh" contype="1" conaffinity="0" group="0" rgba="0.2 0.2 0.2 0.2" mesh="test_convex32.stl"/>
+            <geom name="test_convex33.stl" pos="0 0 0" type="mesh" contype="1" conaffinity="0" group="0" rgba="0.2 0.2 0.2 0.2" mesh="test_convex33.stl"/>
+            <geom name="test_convex34.stl" pos="0 0 0" type="mesh" contype="1" conaffinity="0" group="0" rgba="0.2 0.2 0.2 0.2" mesh="test_convex34.stl"/>
+            <geom name="test_convex35.stl" pos="0 0 0" type="mesh" contype="1" conaffinity="0" group="0" rgba="0.2 0.2 0.2 0.2" mesh="test_convex35.stl"/>
+            <geom name="test_convex36.stl" pos="0 0 0" type="mesh" contype="1" conaffinity="0" group="0" rgba="0.2 0.2 0.2 0.2" mesh="test_convex36.stl"/>
+            <geom name="test_convex37.stl" pos="0 0 0" type="mesh" contype="1" conaffinity="0" group="0" rgba="0.2 0.2 0.2 0.2" mesh="test_convex37.stl"/>
+            <geom name="test_convex38.stl" pos="0 0 0" type="mesh" contype="1" conaffinity="0" group="0" rgba="0.2 0.2 0.2 0.2" mesh="test_convex38.stl"/>
+            <geom name="test_convex39.stl" pos="0 0 0" type="mesh" contype="1" conaffinity="0" group="0" rgba="0.2 0.2 0.2 0.2" mesh="test_convex39.stl"/>
+            <geom name="test_convex4.stl" pos="0 0 0" type="mesh" contype="1" conaffinity="0" group="0" rgba="0.2 0.2 0.2 0.2" mesh="test_convex4.stl"/>
+            <geom name="test_convex40.stl" pos="0 0 0" type="mesh" contype="1" conaffinity="0" group="0" rgba="0.2 0.2 0.2 0.2" mesh="test_convex40.stl"/>
+            <geom name="test_convex41.stl" pos="0 0 0" type="mesh" contype="1" conaffinity="0" group="0" rgba="0.2 0.2 0.2 0.2" mesh="test_convex41.stl"/>
+            <geom name="test_convex42.stl" pos="0 0 0" type="mesh" contype="1" conaffinity="0" group="0" rgba="0.2 0.2 0.2 0.2" mesh="test_convex42.stl"/>
+            <geom name="test_convex43.stl" pos="0 0 0" type="mesh" contype="1" conaffinity="0" group="0" rgba="0.2 0.2 0.2 0.2" mesh="test_convex43.stl"/>
+            <geom name="test_convex44.stl" pos="0 0 0" type="mesh" contype="1" conaffinity="0" group="0" rgba="0.2 0.2 0.2 0.2" mesh="test_convex44.stl"/>
+            <geom name="test_convex45.stl" pos="0 0 0" type="mesh" contype="1" conaffinity="0" group="0" rgba="0.2 0.2 0.2 0.2" mesh="test_convex45.stl"/>
+            <geom name="test_convex46.stl" pos="0 0 0" type="mesh" contype="1" conaffinity="0" group="0" rgba="0.2 0.2 0.2 0.2" mesh="test_convex46.stl"/>
+            <geom name="test_convex47.stl" pos="0 0 0" type="mesh" contype="1" conaffinity="0" group="0" rgba="0.2 0.2 0.2 0.2" mesh="test_convex47.stl"/>
+            <geom name="test_convex48.stl" pos="0 0 0" type="mesh" contype="1" conaffinity="0" group="0" rgba="0.2 0.2 0.2 0.2" mesh="test_convex48.stl"/>
+            <geom name="test_convex49.stl" pos="0 0 0" type="mesh" contype="1" conaffinity="0" group="0" rgba="0.2 0.2 0.2 0.2" mesh="test_convex49.stl"/>
+            <geom name="test_convex5.stl" pos="0 0 0" type="mesh" contype="1" conaffinity="0" group="0" rgba="0.2 0.2 0.2 0.2" mesh="test_convex5.stl"/>
+            <geom name="test_convex50.stl" pos="0 0 0" type="mesh" contype="1" conaffinity="0" group="0" rgba="0.2 0.2 0.2 0.2" mesh="test_convex50.stl"/>
+            <geom name="test_convex51.stl" pos="0 0 0" type="mesh" contype="1" conaffinity="0" group="0" rgba="0.2 0.2 0.2 0.2" mesh="test_convex51.stl"/>
+            <geom name="test_convex52.stl" pos="0 0 0" type="mesh" contype="1" conaffinity="0" group="0" rgba="0.2 0.2 0.2 0.2" mesh="test_convex52.stl"/>
+            <geom name="test_convex53.stl" pos="0 0 0" type="mesh" contype="1" conaffinity="0" group="0" rgba="0.2 0.2 0.2 0.2" mesh="test_convex53.stl"/>
+            <geom name="test_convex54.stl" pos="0 0 0" type="mesh" contype="1" conaffinity="0" group="0" rgba="0.2 0.2 0.2 0.2" mesh="test_convex54.stl"/>
+            <geom name="test_convex55.stl" pos="0 0 0" type="mesh" contype="1" conaffinity="0" group="0" rgba="0.2 0.2 0.2 0.2" mesh="test_convex55.stl"/>
+            <geom name="test_convex56.stl" pos="0 0 0" type="mesh" contype="1" conaffinity="0" group="0" rgba="0.2 0.2 0.2 0.2" mesh="test_convex56.stl"/>
+            <geom name="test_convex57.stl" pos="0 0 0" type="mesh" contype="1" conaffinity="0" group="0" rgba="0.2 0.2 0.2 0.2" mesh="test_convex57.stl"/>
+            <geom name="test_convex58.stl" pos="0 0 0" type="mesh" contype="1" conaffinity="0" group="0" rgba="0.2 0.2 0.2 0.2" mesh="test_convex58.stl"/>
+            <geom name="test_convex59.stl" pos="0 0 0" type="mesh" contype="1" conaffinity="0" group="0" rgba="0.2 0.2 0.2 0.2" mesh="test_convex59.stl"/>
+            <geom name="test_convex6.stl" pos="0 0 0" type="mesh" contype="1" conaffinity="0" group="0" rgba="0.2 0.2 0.2 0.2" mesh="test_convex6.stl"/>
+            <geom name="test_convex7.stl" pos="0 0 0" type="mesh" contype="1" conaffinity="0" group="0" rgba="0.2 0.2 0.2 0.2" mesh="test_convex7.stl"/>
+            <geom name="test_convex8.stl" pos="0 0 0" type="mesh" contype="1" conaffinity="0" group="0" rgba="0.2 0.2 0.2 0.2" mesh="test_convex8.stl"/>
+            <geom name="test_convex9.stl" pos="0 0 0" type="mesh" contype="1" conaffinity="0" group="0" rgba="0.2 0.2 0.2 0.2" mesh="test_convex9.stl"/>
+        
+            <!-- UR3 robot (right) -->
+            <body name="right_arm_roty" pos="0.160612 0 1.189287" quat="0.382683 0 0.923880 0">
+                <body name="right_arm_rotz" quat="1 0 0 0">
+                    <include file="ur3_right_arm.xml"/>
+                </body>
+            </body>
+
+        </body>
+
+        <!-- a juggling ball that is going to be thrown at the UR3 robot -->
+        <!-- juggling ball does not bounce off from the hand and is filled with sand -->
+        <!-- bouncing property of the ball can be modified through adjusting solref parameters -->
+        <body name="ball" pos="0 -1 0.4">
+            <freejoint/>
+            <geom name="ball" type="sphere" size="0.04" rgba="1 0 0 1" mass="0.1"/>
+        </body>
+
+        <!-- juggling cone -->
+        <!-- <body name="juggline_cone_pos_quat" pos="0 -1 0.1" quat="0.7071 0 0.7071 0">
+            <freejoint/>
+            <include file="ur3_juggling_cone.xml"/>
+        </body> -->
+
+    </worldbody>
+
+    <!-- define actuators for the UR3 robot (not gonna be working with grippers...!) -->
+    <actuator>
+
+        <!--UR3 (https://www.universal-robots.com/articles/ur-articles/max-joint-torques/)-->
+        <motor name="right_shoulder_pan_joint" joint="right_shoulder_pan_joint" ctrlrange="-50 50" />
+        <motor name="right_shoulder_lift_joint" joint="right_shoulder_lift_joint" ctrlrange="-50 50" />
+        <motor name="right_elbow_joint" joint="right_elbow_joint" ctrlrange="-25 25" />
+        <motor name="right_wrist_1_joint" joint="right_wrist_1_joint" ctrlrange="-10 10" />
+        <motor name="right_wrist_2_joint" joint="right_wrist_2_joint" ctrlrange="-10 10" />
+        <motor name="right_wrist_3_joint" joint="right_wrist_3_joint" ctrlrange="-10 10" />
+
+    </actuator>
+
+</mujoco>

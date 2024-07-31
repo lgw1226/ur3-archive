@@ -1,0 +1,14 @@
+<mujoco model="juggling_cone">
+
+    <body name="juggling_cone" pos="0 0 0">
+        <geom type= "mesh" mesh="cone_part" material="green" contype="1" group="0" pos="0.03 0 0"/>
+        <geom type= "mesh" mesh="cone_part" material="green" contype="1" group="0" pos="0.03 0 0" quat="1 1 0 0"/>
+        <geom type= "mesh" mesh="cone_part" material="green" contype="1" group="0" pos="0.03 0 0" quat="0.92388 0.38268 0 0"/>
+        <geom type= "mesh" mesh="cone_part" material="green" contype="1" group="0" pos="0.03 0 0" quat="1 -1 0 0"/>
+        <geom type= "mesh" mesh="cone_part" material="green" contype="1" group="0" pos="0.03 0 0" quat="0.92388 -0.38268 0 0"/>
+        <geom type= "mesh" mesh="cone_part" material="green" contype="1" group="0" pos="0.03 0 0" quat="0 1 0 0"/>
+        <geom type= "mesh" mesh="cone_part" material="green" contype="1" group="0" pos="0.03 0 0" quat="0.38268 0.92388 0 0"/>
+        <geom type= "mesh" mesh="cone_part" material="green" contype="1" group="0" pos="0.03 0 0" quat="0.38268 -0.92388 0 0"/>
+    </body>
+
+</mujoco>
